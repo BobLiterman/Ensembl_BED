@@ -106,7 +106,7 @@ intergenicBED <- function(chromosome){
 #   }
 # }
 
-setwd('/home/ralubuntu/Work/Script_Test/GFF_Processor')
+setwd('/home/ralubuntu/Work/Ensembl_BED/')
 
 cores <- parallel::detectCores()
 
