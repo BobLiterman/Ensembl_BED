@@ -140,7 +140,8 @@ file_id <- 'HomSap'
 
 # Set Ensembl ID prefix + genome (i.e. ENS [Human], ENSMUS [Mouse], ENSBTA [Cow])
 ensembl_prefix <- 'ENS'
-ensembl = useMart("ensembl",dataset="hsapiens_gene_ensembl",host='http://apr2018.archive.ensembl.org')
+ensembl_dataset <- "hsapiens_gene_ensembl"
+ensembl = useMart("ensembl",dataset=ensembl_dataset) # Can set to a specific build using ,host='http://apr2018.archive.ensembl.org' from listEnsemblArchives() 
 
 # Extract annotations from desired list
 filtered_gff3 <- raw_gff3 %>% filter(Annotation %in% desired_list) %>% mutate(col_count = str_count(Description,";"))
